@@ -1,6 +1,12 @@
-# Date formatter kata
+# Timespan formatter kata
 
-Write a function or method that takes as input an amount of time, expressed as an arbitrary number of minutes, and returns 
+## The problem
+
+We have a task that takes some amount of time. We know this duration in minutes, but we want to print it out in a more human-readable form, i.e., in terms of minutes, hours, days, and weeks.
+
+## Objective
+
+Write a function or method that takes as input an amount of time expressed as an arbitrary number of minutes, and returns 
 a string with a human-readable description of that amount of time expressed in weeks, days, hours, and minutes.
 
 For example: given <code>12345</code>, return: <code>"1 week 1 day 13 hours 45 minutes"</code>
@@ -11,7 +17,7 @@ The solution must satisfy the following:
 * There's only one exception to the rule above: for input <code>0</code>, return <code>"0 minutes"</code>
 * Use singular and plural as needed
 
-The kata should be solved in TDD, possibly using a functional programming language.
+The kata should be solved in TDD. Optionally, use a functional programming language and try to stick to pure FP.
 
 ## Optional tasks
 
@@ -21,7 +27,7 @@ Use commas and "and" appropriately, for example: <code>"1 week, 1 day, 13 hours,
 
 ### Round the less significant parts
 
-Let's define the "depth" of the output string produced by our function as the number of "steps" between the *largest* and 
+Let's define the **depth** of the output string produced by our function as the number of "steps" between the *largest* and 
 the *smallest* unit of time that is being used. For example:
 
 <code>"1 week 1 day 13 hours 45 minutes"</code> has depth 3 (weeks is "3 steps" away from minutes)<br>
@@ -29,8 +35,7 @@ the *smallest* unit of time that is being used. For example:
 <code>"1 hour 45 minutes"</code> has depth 1 (hours is "1 step" away from minutes)<br>
 <code>"1 hour"</code> has depth 0 (hours is both the largest and smallest unit of time)
 
-Add an argument for your function to specify the maximum depth allowed in the output. Round the less significant parts
-of the amount of time as needed to satisfy this constraint. Rounding is to the nearest value. For example:
+Add an argument for your function, to specify the maximum depth allowed in the output, by omitting the less significant parts of the amount of time, and round to the nearest value. For example:
 
 given <code>12345</code> and maximum depth <code>3</code>, return: <code>"1 week 1 day 13 hours 45 minutes"</code> as usual (depth 3 is allowed)<br>
 given <code>12345</code> and maximum depth <code>2</code>, return: <code>"1 week 1 day 14 hours"</code> (depth 3 is not allowed; minutes must be skipped, and they are rounded up to one full hour)<br>
