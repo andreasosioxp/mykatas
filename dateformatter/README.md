@@ -2,7 +2,7 @@
 
 ## The problem
 
-We have a task that takes some amount of time. We know this duration in minutes, but we want to print it out in a more human-readable form, i.e., in terms of minutes, hours, days, and weeks.
+We have a task that takes some amount of time. We know this duration in minutes, but we want to print it out in a more human-readable form, i.e., in weeks, days, hours, and minutes.
 
 ## Objective
 
