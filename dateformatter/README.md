@@ -32,12 +32,9 @@ the *smallest* unit of time that is being used. For example:
 Add an argument for your function to specify the maximum depth allowed in the output. Round the less significant parts
 of the amount of time as needed to satisfy this constraint. Rounding is to the nearest value. For example:
 
-given <code>12345</code> and maximum depth <code>3</code>, return: <code>"1 week 1 day 13 hours 45 minutes"</code> as usual<br>
-given <code>12345</code> and maximum depth <code>2</code>, return: <code>"1 week 1 day 14 hours"</code> (minutes get rounded up to one full hour)<br>
-given <code>12345</code> and maximum depth <code>1</code>, return: <code>"1 week 2 days"</code> (hours get rounded up to one full day)<br>
+given <code>12345</code> and maximum depth <code>3</code>, return: <code>"1 week 1 day 13 hours 45 minutes"</code> as usual (depth 3 is allowed)<br>
+given <code>12345</code> and maximum depth <code>2</code>, return: <code>"1 week 1 day 14 hours"</code> (depth 3 is not allowed; minutes must be skipped, and they are rounded up to one full hour)<br>
+given <code>12345</code> and maximum depth <code>1</code>, return: <code>"1 week 2 days"</code> (depth 2 is not allowed: hours must be skipped and again get rounded up to one full day)<br>
 given <code>12345</code> and maximum depth <code>0</code>, return: <code>"1 week"</code> (days get rounded down to 0 as 2 days are less than 1/2 week)<br>
 
-Note that "depth" is not the same as "number of parts" in the string. For example
-
-given a number of minutes that corresponds to <code>1 weeks 2 minutes</code> and maximum depth <code>2</code>, you should return: <code>"1 week"</code> as minutes get rounded up.
 
