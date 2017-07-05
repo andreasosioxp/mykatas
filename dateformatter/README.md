@@ -23,7 +23,9 @@ The kata should be solved in TDD. Optionally, use a functional programming langu
 
 ### 1. Use conjunctions
 
-Use commas and "and" properly, for example: <code>"1 week, 1 day, 13 hours, and 45 minutes"</code>.
+Use commas and "and" properly, for example: <code>"1 week, 1 day, 13 hours, and 45 minutes"</code>. 
+
+Note: follow the <a href="https://en.wikipedia.org/wiki/Serial_comma">Oxford Comma</a> rule, i.e., use a comma after the penultimate item in a list of three or more item, before "and" (as in the example above). If you only have two items, no comma should be used: <code>1 day and 2 hours</code>.
 
 ### 2. Provide a compact alternative
 
