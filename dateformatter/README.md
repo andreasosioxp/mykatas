@@ -46,7 +46,7 @@ minutes
 Let's also define the **depth** of a timespan description as the distance (in "steps") between the *largest* and 
 the *smallest* unit of time that is being used. For example, "weeks" are one step above "days", so "1 week 2 days" has depth 1; on the other hand, weeks are 3 steps above minutes, so "1 week 2 minutes" has depth 3.
 
-Add an argument to your function to specify the maximum depth allowed in the output. Then modify the function to omit the less significant parts of the description in order accordingly. For example, here's how the description should change based on the maximum depth argument:
+**Your goal**: Add an argument to your function to specify the maximum depth allowed in the output. Then modify the function to omit the less significant parts of the description in order accordingly. For example, here's how the description should change based on the maximum depth argument:
 
 basic description | maximum depth | resulting description
 ------------------|---------------|----------------------
