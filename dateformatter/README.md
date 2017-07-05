@@ -58,7 +58,7 @@ basic description | maximum depth | resulting description
 1 day 1 minute | 1 | 1 day 
 1 day 1 minute | 2 | 1 day 1 minute 
 
-When omitting parts of the timespan, round to the *nearest value allowed by your maximum depth*, i.e., if omitting minutes, increment the hours if minutes are >30; if omitting hours, increment the days if the hours are >12; if omitting days, increment the weeks if the days are >3. Here's a few more examples:
+When omitting parts of the timespan, round to the *nearest value allowed by your maximum depth*, i.e., if omitting minutes, increment the hours if minutes are >30; if omitting hours, increment the days if hours are >12; if omitting days, increment the weeks if days are >3. Here's a few more examples:
 
 basic description | maximum depth | resulting description
 ------------------|---------------|----------------------
