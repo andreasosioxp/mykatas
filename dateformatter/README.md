@@ -25,8 +25,7 @@ The kata should be solved in TDD. Optionally, use a functional programming langu
 
 Use commas and "and" properly, for example: <code>"1 week, 1 day, 13 hours, and 45 minutes"</code>. 
 
-Note: follow the <a href="https://en.wikipedia.org/wiki/Serial_comma">Oxford Comma</a> rule, i.e., *use a comma after the penultimate item in a list of three or more item, before "and"*. In other words, place a comma before the "and" (as in the example above), unless you only have two items. For example: <code>"1 day, 2 hours, and 3 minutes"</code>,
-<code>"1 day and 2 hours"</code>
+Note: follow the <a href="https://en.wikipedia.org/wiki/Serial_comma">Oxford Comma</a> rule, i.e., you must place a comma before the word "and" if you have *more than two* items. For example: <code>"1 day, 2 hours, and 3 minutes"</code>, <code>"1 day and 2 hours"</code>.
 
 ### 2. Provide a compact alternative
 
