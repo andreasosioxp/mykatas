@@ -2,7 +2,7 @@
 
 ## The problem
 
-We have a system that processes tasks. Each task take some amount of time. We know this duration in minutes, but we want to print it out in a more human-readable form, i.e., in weeks, days, hours, and minutes.
+We have a system that processes tasks. Each task takes some amount of time. We know these durations in minutes, but we want to print them out in a more human-readable form, i.e., in weeks, days, hours, and minutes.
 
 ## Objective
 
