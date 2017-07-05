@@ -23,7 +23,7 @@ The kata should be solved in TDD. Optionally, use a functional programming langu
 
 ### 1. Use conjunctions
 
-Use commas and "and" appropriately, for example: <code>"1 week, 1 day, 13 hours, and 45 minutes"</code>.
+Use commas and "and" properly, for example: <code>"1 week, 1 day, 13 hours, and 45 minutes"</code>.
 
 ### 2. Provide a compact alternative
 
