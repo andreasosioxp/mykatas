@@ -2,12 +2,11 @@
 
 ## The problem
 
-We have a task that takes some amount of time. We know this duration in minutes, but we want to print it out in a more human-readable form, i.e., in weeks, days, hours, and minutes.
+We have a system that processes tasks. Each task take some amount of time. We know this duration in minutes, but we want to print it out in a more human-readable form, i.e., in weeks, days, hours, and minutes.
 
 ## Objective
 
-Write a function or method that takes as input an amount of time expressed as an arbitrary number of minutes, and returns 
-a string with a human-readable description of that amount of time expressed in weeks, days, hours, and minutes.
+Write a function or method that takes as input an amount of time expressed as an arbitrary positive number of minutes, and returns a string with a human-readable description of that amount of time expressed in weeks, days, hours, and minutes.
 
 For example: given <code>12345</code>, return: <code>"1 week 1 day 13 hours 45 minutes"</code>
 
