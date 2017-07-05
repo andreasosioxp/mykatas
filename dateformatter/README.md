@@ -34,28 +34,35 @@ Write another method or function with the same behavior as above (or add an opti
 Keep your original function, and try to end up with as little duplicated code as possible.
 
 ### 3. Round the less significant parts
-In many context, it makes little sense to use widely different units of time when describing time spans. For example, in estimating the time you will take to complete a kata, "20 minutes" makes sense, "2 weeks" makes sense, but "2 weeks and 2 minutes" doesn't.
+Often, it makes little sense to use widely different units of time when describing time spans. For example, it makes sense to say that resolving a kata will take "2 minutes" or "2 weeks", but "2 weeks and 2 minutes" sounds weird. In order to make our timespan description more "human", we want to rule out weird sentences like that.
 
-Consider the "stack" of our units of time:
+Let's start by looking at the stack of units of time we are using:
 
-weeks
-days
-hours
+weeks<br>
+days<br>
+hours<br> 
 minutes
 
-Let's define the **depth** of the output string produced by our function as the distance between the *largest* and 
-the *smallest* unit of time that is being used. For example, "weeks" are one step above "days", two steps above "hours", three steps above "minutes". For example:
+Let's also define the **depth** of a timespan description as the distance (in "steps") between the *largest* and 
+the *smallest* unit of time that is being used. For example, "weeks" are one step above "days", so "1 week 2 days" has depth 1; on the other hand, weeks are 3 steps above minutes, so "1 week 2 minutes" has depth 3.
 
-* <code>"1 week 1 day 13 hours 45 minutes"</code> has depth 3 (weeks, the largest unit of time being used, is "3 steps" away from minutes, the smallest)
-* <code>"1 week 45 minutes"</code> also has depth 3 (same as above)
-* <code>"1 hour 45 minutes"</code> has depth 1 (hours is "1 step" away from minutes)
-* <code>"1 hour"</code> has depth 0 (hours is both the largest and smallest unit of time)
+Add an argument to your function to specify the maximum depth allowed in the output. Then modify the function to omit the less significant parts of the description in order accordingly. For example, here's how the description should change based on the maximum depth argument:
 
-Add an argument for your function (an integer in the range 0..3), to specify the maximum depth allowed in the output, by omitting the less significant parts of the amount of time, and round to the nearest value. For example:
+basic description | maximum depth | resulting description
+------------------|---------------|----------------------
+1 week 1 day 1 hour 1 minute | 3 | 1 week 1 day 1 hour 1 minute
+2 weeks 1 hour 13 minutes | 2 | 2 weeks 1 hour 
+2 weeks 1 day 2 hours 1 minute | 1 | 2 weeks 1 day
+1 day 1 minute | 1 | 1 day 
 
-* given <code>12345</code> and maximum depth <code>3</code>, return: <code>"1 week 1 day 13 hours 45 minutes"</code> as usual (depth 3 is allowed)
-* given <code>12345</code> and maximum depth <code>2</code>, return: <code>"1 week 1 day 14 hours"</code> (depth 3 is not allowed; minutes must be skipped, and they are rounded up to one full hour)
-* given <code>12345</code> and maximum depth <code>1</code>, return: <code>"1 week 2 days"</code> (depth 2 is not allowed: hours must be skipped and again get rounded up to one full day)
-* given <code>12345</code> and maximum depth <code>0</code>, return: <code>"1 week"</code> (days get rounded down to 0 as 2 days are less than 1/2 week)
+When omitting parts of the timespan, round to the *nearest value allowed by your maximum depth*, i.e., if omitting minutes, increment the hours if minutes are >30; if omitting hours, increment the days if the hours are >12; if omitting days, increment the weeks if the days are >3. Here's some more example:
+
+basic description | maximum depth | resulting description
+------------------|---------------|----------------------
+1 week 1 day 13 hours 45 minutes | 2 | 1 week 1 day 14 hours
+1 week 1 day 13 hours 45 minutes | 1 | 1 week 2 days
+1 week 3 days 12 hours 31 minutes | 0 | 2 weeks
+
+(The last example is the trickiest; make sure to have a test for it).
 
 ### 3bis. Combine 2 and 3 :-)
