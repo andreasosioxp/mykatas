@@ -27,7 +27,7 @@ Use commas and "and" appropriately, for example: <code>"1 week, 1 day, 13 hours,
 
 ### 2. Provide a compact alternative
 
-Write another method or function with the same behavior as above (or add an optional behavior to the original function) to produces a compact output using "w" for weeks, "d" for days, "h" for hours, and "m" for minutes, like this:
+Write another method or function with the same behavior as above (or add an optional behavior to the original function) to produce a compact output using "w" for weeks, "d" for days, "h" for hours, and "m" for minutes, like this:
 
 * given <code>12345</code>, return: <code>"1w 1d 13h 45m"</code>
 
