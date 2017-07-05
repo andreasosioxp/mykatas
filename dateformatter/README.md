@@ -64,6 +64,6 @@ basic description | maximum depth | resulting description
 1 week 1 day 13 hours 45 minutes | 1 | 1 week 2 days
 1 week 3 days 12 hours 31 minutes | 0 | 2 weeks
 
-(The last example is the trickiest; make sure to have a test for it).
+The last example is the trickiest; make sure to have a test for it. There are other tricky scenarios to figure out (think "carry-over").
 
 ### 3bis. Combine 2 and 3 :-)
