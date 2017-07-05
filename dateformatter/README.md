@@ -17,7 +17,7 @@ The solution must satisfy the following:
 * Use singular and plural as needed
 * In the basic version, don't use commas or other conjuctions.
 
-The kata should be solved in TDD. Optionally, use a functional programming language and try to stick to do it in pure FP.
+The kata should be solved in TDD. Optionally, use a functional programming language and try to keep it pure FP.
 
 ## Optional tasks
 
